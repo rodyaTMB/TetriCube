@@ -16,7 +16,13 @@ public struct TetraminoData
 {
     public Tetramino tetramino;
     public Tile tile;
-    public Vector2Int[] cells;
+    public Vector2Int[] cells { get; private set; }
+
+
+    public void Initialize()
+    {
+        this.cells = Data.Cells[this.tetramino];
+    }
 }
 
 
